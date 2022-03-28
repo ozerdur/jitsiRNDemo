@@ -3,7 +3,7 @@ import {Platform} from 'react-native';
 import {View, ActivityIndicator, StyleSheet} from 'react-native';
 import JitsiMeet, {JitsiMeetView} from 'react-native-jitsi-meet';
 
-function VideoCallScreen(props) {
+function VideoCallScreen({navigation}) {
   const [jitsiVisible, setJitsiVisible] = useState(true);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -35,7 +35,9 @@ function VideoCallScreen(props) {
     }, 100);
   }
 
-  function handleOnConferenceTerminated(nativeEvent) {}
+  function handleOnConferenceTerminated(nativeEvent) {
+    navigation.navigate('Home');
+  }
 
   function handleOnConferenceJoined(nativeEvent) {
     setTimeout(() => {
