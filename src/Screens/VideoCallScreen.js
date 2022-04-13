@@ -5,7 +5,7 @@ import JitsiMeet, {JitsiMeetView} from 'react-native-jitsi-meet';
 
 function VideoCallScreen({navigation}) {
   const [jitsiVisible, setJitsiVisible] = useState(true);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     const url = 'https://meet.jit.si/ozer';

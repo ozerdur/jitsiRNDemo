@@ -11,7 +11,13 @@ const Stack = createNativeStackNavigator();
 function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
+      <Stack.Navigator
+        initialRouteName="Home"
+        screenOptions={{
+          animationEnabled: false,
+          //  headerMode: 'none',
+          //  headerShown: false,
+        }}>
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="VideoCall" component={VideoCallScreen} />
       </Stack.Navigator>

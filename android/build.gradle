@@ -38,10 +38,14 @@ allprojects {
         }
         google()
 
+        maven { url "file:/tmp/repo" }
+
         maven { // <---- Add this block
             url "https://github.com/jitsi/jitsi-maven-repository/raw/master/releases"
         }
         
         maven { url 'https://www.jitpack.io' }
+
+        jcenter() 
     }
 }
